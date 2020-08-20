@@ -1,0 +1,50 @@
+            *{
+				margin:0;
+				padding:0;
+			}
+			body{
+				height:100vh;
+				background-image: linear-gradient(to bottom,#5f5fff 0%,#03036e 100%);
+			}
+			.main,.wave{
+				width: 200px;
+				height: 200px;
+				
+				border-radius: 50%;
+				position: absolute; 
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);  
+			}
+			.main{
+				
+				border: 1px solid #0df;
+				/* 
+				DIV的中心与body
+				的中心重合*/
+				padding: 10px;
+			}
+			.wave{
+				
+				background-color: #0099CC;
+				 overflow: hidden; 
+			}
+			.waterball{
+				width:300px;
+				height: 300px;
+				background-color: rgba(255,255,255,0.8);
+				position: absolute;
+                left:50%;top:0;
+				transform: translate(-50%,-60%);
+				border-radius: 40%;
+				animation: wave 5s linear infinite; 
+				/* animation: wave 5s linear 1;     声明时候用@keyFrames wave {  from{}开始时候的样式和 to的结束时候的样式，还有其他关键帧的样式
+                调用的时候,animation:动画名称 持续时间 时间曲线函数，重复次数}*/
+			}
+			@keyframes wave{
+				from{}
+				to{
+					/* 在原来的位置旋转 */
+					transform:translate(-50%,-60%) rotate(360deg);
+				}
+			}
